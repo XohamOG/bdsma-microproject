@@ -10,11 +10,13 @@ import {
   MessageSquare,
   Cpu,
   BookOpen,
+  Zap,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Project Overview', icon: Compass },
   { href: '/dashboard', label: 'Live Analytics', icon: LayoutDashboard },
+  { href: '/ingestion', label: 'Realtime Ingestion', icon: Zap },
   { href: '/bdsma', label: 'BDSMA Subject Lab', icon: BookOpen },
   { href: '/compare', label: 'Compare Airlines', icon: BarChart3 },
   { href: '/tweets', label: 'Tweet Explorer', icon: MessageSquare },

@@ -21,3 +21,7 @@ yarn-error.log*
 .env
 .env.local
 *.tmp
+
+# Large synthetic benchmarks
+data/raw/Tweets_100k.csv
+data/raw/*.tmp.csv

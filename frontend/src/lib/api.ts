@@ -219,4 +219,38 @@ export const apiService = {
     const json = await res.json();
     return json.data;
   },
+
+  async load100kDataset(): Promise<DatasetUploadResult> {
+    const res = await fetch(`${BASE_URL}/dataset/load-100k`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    const json = await res.json();
+    return json.data;
+  },
+
+  async getStreamSamples(count: number = 20): Promise<Array<{
+    airline: string;
+    sentiment: 'positive' | 'neutral' | 'negative';
+    confidence: number;
+    compound: number;
+    reason: string | null;
+    text: string;
+  }>> {
+    try {
+      const res = await fetch(`${BASE_URL}/dataset/stream-sample?count=${count}`);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.data?.samples) return json.data.samples;
+      }
+    } catch {
+      // Fallback sample
+    }
+    return [
+      { airline: 'United', sentiment: 'negative', confidence: 0.94, compound: -0.76, reason: 'Customer Service Issue', text: '@united on hold for 3 hours and disconnected again! Truly unacceptable service.' },
+      { airline: 'Virgin America', sentiment: 'positive', confidence: 0.98, compound: 0.88, reason: null, text: '@VirginAmerica loved the smooth flight from SFO to JFK! Best airline experience.' },
+      { airline: 'Southwest', sentiment: 'neutral', confidence: 0.72, compound: 0.05, reason: null, text: '@SouthwestAir can I change my seat assignment online for tomorrow departure?' },
+      { airline: 'US Airways', sentiment: 'negative', confidence: 0.99, compound: -0.89, reason: 'Late Flight', text: '@USAirways delayed another 2 hours with zero explanation. Missing connection in CLT!' },
+    ];
+  },
 };

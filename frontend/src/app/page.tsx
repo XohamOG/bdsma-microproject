@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   TrendingDown,
   Sparkles,
+  Zap,
 } from 'lucide-react';
 import { apiService } from '@/lib/api';
 import { SentimentAnalytics, Brand, AnomalyEvent } from '@/types';
@@ -69,31 +70,29 @@ export default function LandingPage() {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-3 pt-3">
             <Link
-              href="/dashboard"
+              href="/ingestion"
               className="px-6 py-3 rounded-[12px] bg-nouveau-teal hover:bg-[#006e6e] text-nouveau-ivory font-display font-semibold text-sm transition-all shadow-nouveau flex items-center gap-2 group"
             >
-              <span>Launch Live Analytics</span>
+              <Zap className="w-4 h-4 text-nouveau-gold group-hover:scale-110 transition-transform" />
+              <span>Realtime Ingestion & 100k Lab</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             <Link
-              href="/tweets"
-              className="px-6 py-3 rounded-[12px] border border-nouveau-gold bg-nouveau-cream hover:bg-nouveau-ivory text-nouveau-charcoal hover:text-nouveau-teal font-display font-semibold text-sm transition-all shadow-sm flex items-center gap-2"
+              href="/dashboard"
+              className="px-5 py-3 rounded-[12px] border border-nouveau-gold bg-nouveau-cream hover:bg-nouveau-ivory text-nouveau-charcoal hover:text-nouveau-teal font-display font-semibold text-sm transition-all shadow-sm flex items-center gap-2"
             >
-              <MessageSquare className="w-4 h-4 text-nouveau-gold" />
-              <span>Explore 14,485 Real Tweets</span>
+              <span>Live Analytics</span>
             </Link>
 
             <Link
-              href="/benchmarks"
+              href="/tweets"
               className="px-5 py-3 rounded-[12px] border border-nouveau-gold/40 hover:border-nouveau-teal bg-transparent text-nouveau-charcoal font-display font-semibold text-sm transition-all flex items-center gap-2"
             >
-              <Cpu className="w-4 h-4 text-nouveau-teal" />
-              <span>PySpark Benchmarks</span>
+              <MessageSquare className="w-4 h-4 text-nouveau-gold" />
+              <span>Tweet Explorer</span>
             </Link>
-          </div>
         </div>
       </section>
 
@@ -345,7 +344,23 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link
+            href="/ingestion"
+            className="p-4 rounded-[12px] bg-nouveau-ivory border-2 border-nouveau-teal/60 hover:border-nouveau-teal hover:shadow-nouveau transition-all group"
+          >
+            <div className="w-8 h-8 rounded-[8px] bg-nouveau-teal flex items-center justify-center text-nouveau-ivory group-hover:scale-105 transition-transform">
+              <Zap className="w-4 h-4 text-nouveau-gold" />
+            </div>
+            <h4 className="font-display font-bold text-sm text-nouveau-charcoal mt-3 group-hover:text-nouveau-teal transition-colors flex items-center gap-1.5">
+              <span>Realtime Ingestion & 100k Lab</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.2 bg-nouveau-teal/15 text-nouveau-teal rounded font-bold uppercase">New</span>
+            </h4>
+            <p className="text-xs font-display text-nouveau-charcoal/60 mt-1">
+              Live streaming ingestion & animated PySpark ETL stress-testing across 100,000 tweets.
+            </p>
+          </Link>
+
           <Link
             href="/dashboard"
             className="p-4 rounded-[12px] bg-nouveau-ivory border border-nouveau-gold/40 hover:border-nouveau-teal hover:shadow-nouveau transition-all group"
@@ -372,7 +387,7 @@ export default function LandingPage() {
               Tweet Explorer & Pagination
             </h4>
             <p className="text-xs font-display text-nouveau-charcoal/60 mt-1">
-              Search and filter 14,485 genuine tweets by airline, sentiment, and reason.
+              Search and filter genuine tweets by airline, sentiment, and reason.
             </p>
           </Link>
 
@@ -403,6 +418,21 @@ export default function LandingPage() {
             </h4>
             <p className="text-xs font-display text-nouveau-charcoal/60 mt-1">
               PySpark distributed cluster throughput vs Pandas single-node tests.
+            </p>
+          </Link>
+
+          <Link
+            href="/bdsma"
+            className="p-4 rounded-[12px] bg-nouveau-ivory border border-nouveau-gold/40 hover:border-nouveau-teal hover:shadow-nouveau transition-all group"
+          >
+            <div className="w-8 h-8 rounded-[8px] bg-nouveau-gold/20 flex items-center justify-center text-nouveau-gold group-hover:bg-nouveau-gold group-hover:text-nouveau-ivory transition-colors">
+              <Database className="w-4 h-4" />
+            </div>
+            <h4 className="font-display font-bold text-sm text-nouveau-charcoal mt-3 group-hover:text-nouveau-teal transition-colors">
+              BDSMA Subject Lab
+            </h4>
+            <p className="text-xs font-display text-nouveau-charcoal/60 mt-1">
+              Academic review of Volume, Velocity, Variety, Veracity, and Value.
             </p>
           </Link>
         </div>
