@@ -6,106 +6,151 @@
       "code": "AA"
     },
     "metrics": {
-      "total_tweets": 2604,
+      "total_tweets": 18069,
       "sentiment_counts": {
-        "positive": 307,
-        "neutral": 433,
-        "negative": 1864
+        "positive": 2204,
+        "neutral": 3068,
+        "negative": 12797
       },
-      "net_sentiment_score": -59.79,
-      "reputation_index": 20.1,
-      "complaint_rate": 71.58
+      "net_sentiment_score": -58.63,
+      "reputation_index": 20.69,
+      "complaint_rate": 70.82
     },
     "top_complaint_reasons": [
       {
         "reason": "Customer Service Issue",
-        "count": 743,
-        "percentage": 39.86
+        "count": 4129,
+        "percentage": 32.27
       },
       {
         "reason": "Late Flight",
-        "count": 234,
-        "percentage": 12.55
-      },
-      {
-        "reason": "Cancelled Flight",
-        "count": 228,
-        "percentage": 12.23
+        "count": 2437,
+        "percentage": 19.04
       },
       {
         "reason": "Can't Tell",
-        "count": 184,
-        "percentage": 9.87
+        "count": 1742,
+        "percentage": 13.61
+      },
+      {
+        "reason": "Cancelled Flight",
+        "count": 1235,
+        "percentage": 9.65
       },
       {
         "reason": "Lost Luggage",
-        "count": 144,
-        "percentage": 7.73
+        "count": 1023,
+        "percentage": 7.99
       }
     ],
     "timeline": [
       {
+        "date": "2015-02-17",
+        "positive": 113,
+        "neutral": 134,
+        "negative": 549,
+        "total": 796,
+        "net_sentiment_score": -54.77,
+        "reputation_index": 22.61
+      },
+      {
         "date": "2015-02-18",
-        "positive": 0,
-        "neutral": 0,
-        "negative": 1,
-        "total": 1,
-        "net_sentiment_score": -100.0,
-        "reputation_index": 0.0
+        "positive": 132,
+        "neutral": 199,
+        "negative": 840,
+        "total": 1171,
+        "net_sentiment_score": -60.46,
+        "reputation_index": 19.77
       },
       {
         "date": "2015-02-19",
-        "positive": 1,
-        "neutral": 0,
-        "negative": 0,
-        "total": 1,
-        "net_sentiment_score": 100.0,
-        "reputation_index": 100.0
+        "positive": 139,
+        "neutral": 226,
+        "negative": 830,
+        "total": 1195,
+        "net_sentiment_score": -57.82,
+        "reputation_index": 21.09
       },
       {
         "date": "2015-02-20",
-        "positive": 0,
-        "neutral": 0,
-        "negative": 1,
-        "total": 1,
-        "net_sentiment_score": -100.0,
-        "reputation_index": 0.0
+        "positive": 132,
+        "neutral": 189,
+        "negative": 816,
+        "total": 1137,
+        "net_sentiment_score": -60.16,
+        "reputation_index": 19.92
       },
       {
         "date": "2015-02-21",
-        "positive": 0,
-        "neutral": 0,
-        "negative": 1,
-        "total": 1,
-        "net_sentiment_score": -100.0,
-        "reputation_index": 0.0
+        "positive": 144,
+        "neutral": 193,
+        "negative": 820,
+        "total": 1157,
+        "net_sentiment_score": -58.43,
+        "reputation_index": 20.79
       },
       {
         "date": "2015-02-22",
-        "positive": 93,
-        "neutral": 132,
-        "negative": 757,
-        "total": 982,
-        "net_sentiment_score": -67.62,
-        "reputation_index": 16.19
+        "positive": 704,
+        "neutral": 931,
+        "negative": 4026,
+        "total": 5661,
+        "net_sentiment_score": -58.68,
+        "reputation_index": 20.66
       },
       {
         "date": "2015-02-23",
-        "positive": 137,
-        "neutral": 178,
-        "negative": 824,
-        "total": 1139,
-        "net_sentiment_score": -60.32,
-        "reputation_index": 19.84
+        "positive": 153,
+        "neutral": 212,
+        "negative": 794,
+        "total": 1159,
+        "net_sentiment_score": -55.31,
+        "reputation_index": 22.35
       },
       {
         "date": "2015-02-24",
-        "positive": 76,
-        "neutral": 123,
-        "negative": 280,
-        "total": 479,
-        "net_sentiment_score": -42.59,
-        "reputation_index": 28.71
+        "positive": 157,
+        "neutral": 207,
+        "negative": 809,
+        "total": 1173,
+        "net_sentiment_score": -55.58,
+        "reputation_index": 22.21
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 135,
+        "neutral": 206,
+        "negative": 862,
+        "total": 1203,
+        "net_sentiment_score": -60.43,
+        "reputation_index": 19.78
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 151,
+        "neutral": 191,
+        "negative": 793,
+        "total": 1135,
+        "net_sentiment_score": -56.56,
+        "reputation_index": 21.72
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 119,
+        "neutral": 205,
+        "negative": 888,
+        "total": 1212,
+        "net_sentiment_score": -63.45,
+        "reputation_index": 18.28
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 125,
+        "neutral": 175,
+        "negative": 770,
+        "total": 1070,
+        "net_sentiment_score": -60.28,
+        "reputation_index": 19.86
       }
     ]
   },
@@ -116,124 +161,151 @@
       "code": "DL"
     },
     "metrics": {
-      "total_tweets": 2222,
+      "total_tweets": 14373,
       "sentiment_counts": {
-        "positive": 544,
-        "neutral": 723,
-        "negative": 955
+        "positive": 3418,
+        "neutral": 5086,
+        "negative": 5869
       },
-      "net_sentiment_score": -18.5,
-      "reputation_index": 40.75,
-      "complaint_rate": 42.98
+      "net_sentiment_score": -17.05,
+      "reputation_index": 41.47,
+      "complaint_rate": 40.83
     },
     "top_complaint_reasons": [
       {
-        "reason": "Late Flight",
-        "count": 269,
-        "percentage": 28.17
+        "reason": "Customer Service Issue",
+        "count": 1869,
+        "percentage": 31.85
       },
       {
-        "reason": "Customer Service Issue",
-        "count": 199,
-        "percentage": 20.84
+        "reason": "Late Flight",
+        "count": 1095,
+        "percentage": 18.66
       },
       {
         "reason": "Can't Tell",
-        "count": 186,
-        "percentage": 19.48
+        "count": 788,
+        "percentage": 13.43
       },
       {
-        "reason": "Bad Flight",
-        "count": 64,
-        "percentage": 6.7
+        "reason": "Cancelled Flight",
+        "count": 620,
+        "percentage": 10.56
       },
       {
-        "reason": "Flight Attendant Complaints",
-        "count": 60,
-        "percentage": 6.28
+        "reason": "Lost Luggage",
+        "count": 481,
+        "percentage": 8.2
       }
     ],
     "timeline": [
       {
-        "date": "2015-02-16",
-        "positive": 0,
-        "neutral": 1,
-        "negative": 1,
-        "total": 2,
-        "net_sentiment_score": -50.0,
-        "reputation_index": 25.0
-      },
-      {
         "date": "2015-02-17",
-        "positive": 69,
-        "neutral": 86,
-        "negative": 108,
-        "total": 263,
-        "net_sentiment_score": -14.83,
-        "reputation_index": 42.59
+        "positive": 140,
+        "neutral": 233,
+        "negative": 243,
+        "total": 616,
+        "net_sentiment_score": -16.72,
+        "reputation_index": 41.64
       },
       {
         "date": "2015-02-18",
-        "positive": 77,
-        "neutral": 86,
-        "negative": 105,
-        "total": 268,
-        "net_sentiment_score": -10.45,
-        "reputation_index": 44.78
+        "positive": 218,
+        "neutral": 336,
+        "negative": 362,
+        "total": 916,
+        "net_sentiment_score": -15.72,
+        "reputation_index": 42.14
       },
       {
         "date": "2015-02-19",
-        "positive": 78,
-        "neutral": 70,
-        "negative": 135,
-        "total": 283,
-        "net_sentiment_score": -20.14,
-        "reputation_index": 39.93
+        "positive": 219,
+        "neutral": 338,
+        "negative": 360,
+        "total": 917,
+        "net_sentiment_score": -15.38,
+        "reputation_index": 42.31
       },
       {
         "date": "2015-02-20",
-        "positive": 70,
-        "neutral": 90,
-        "negative": 91,
-        "total": 251,
-        "net_sentiment_score": -8.37,
-        "reputation_index": 45.82
+        "positive": 222,
+        "neutral": 305,
+        "negative": 381,
+        "total": 908,
+        "net_sentiment_score": -17.51,
+        "reputation_index": 41.24
       },
       {
         "date": "2015-02-21",
-        "positive": 66,
-        "neutral": 79,
-        "negative": 98,
-        "total": 243,
-        "net_sentiment_score": -13.17,
-        "reputation_index": 43.42
+        "positive": 193,
+        "neutral": 311,
+        "negative": 360,
+        "total": 864,
+        "net_sentiment_score": -19.33,
+        "reputation_index": 40.34
       },
       {
         "date": "2015-02-22",
-        "positive": 77,
-        "neutral": 76,
-        "negative": 255,
-        "total": 408,
-        "net_sentiment_score": -43.63,
-        "reputation_index": 28.19
+        "positive": 1087,
+        "neutral": 1613,
+        "negative": 1852,
+        "total": 4552,
+        "net_sentiment_score": -16.81,
+        "reputation_index": 41.6
       },
       {
         "date": "2015-02-23",
-        "positive": 71,
-        "neutral": 195,
-        "negative": 125,
-        "total": 391,
-        "net_sentiment_score": -13.81,
-        "reputation_index": 43.09
+        "positive": 222,
+        "neutral": 314,
+        "negative": 411,
+        "total": 947,
+        "net_sentiment_score": -19.96,
+        "reputation_index": 40.02
       },
       {
         "date": "2015-02-24",
-        "positive": 36,
-        "neutral": 40,
-        "negative": 37,
-        "total": 113,
-        "net_sentiment_score": -0.88,
-        "reputation_index": 49.56
+        "positive": 242,
+        "neutral": 345,
+        "negative": 397,
+        "total": 984,
+        "net_sentiment_score": -15.75,
+        "reputation_index": 42.12
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 239,
+        "neutral": 363,
+        "negative": 383,
+        "total": 985,
+        "net_sentiment_score": -14.62,
+        "reputation_index": 42.69
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 208,
+        "neutral": 315,
+        "negative": 379,
+        "total": 902,
+        "net_sentiment_score": -18.96,
+        "reputation_index": 40.52
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 208,
+        "neutral": 295,
+        "negative": 403,
+        "total": 906,
+        "net_sentiment_score": -21.52,
+        "reputation_index": 39.24
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 220,
+        "neutral": 318,
+        "negative": 338,
+        "total": 876,
+        "net_sentiment_score": -13.47,
+        "reputation_index": 43.26
       }
     ]
   },
@@ -244,115 +316,151 @@
       "code": "WN"
     },
     "metrics": {
-      "total_tweets": 2420,
+      "total_tweets": 16268,
       "sentiment_counts": {
-        "positive": 570,
-        "neutral": 664,
-        "negative": 1186
+        "positive": 3913,
+        "neutral": 4457,
+        "negative": 7898
       },
-      "net_sentiment_score": -25.45,
-      "reputation_index": 37.27,
-      "complaint_rate": 49.01
+      "net_sentiment_score": -24.5,
+      "reputation_index": 37.75,
+      "complaint_rate": 48.55
     },
     "top_complaint_reasons": [
       {
         "reason": "Customer Service Issue",
-        "count": 391,
-        "percentage": 32.97
-      },
-      {
-        "reason": "Cancelled Flight",
-        "count": 162,
-        "percentage": 13.66
-      },
-      {
-        "reason": "Can't Tell",
-        "count": 159,
-        "percentage": 13.41
+        "count": 2561,
+        "percentage": 32.43
       },
       {
         "reason": "Late Flight",
-        "count": 152,
-        "percentage": 12.82
+        "count": 1459,
+        "percentage": 18.47
       },
       {
-        "reason": "Bad Flight",
-        "count": 90,
-        "percentage": 7.59
+        "reason": "Can't Tell",
+        "count": 1012,
+        "percentage": 12.81
+      },
+      {
+        "reason": "Cancelled Flight",
+        "count": 850,
+        "percentage": 10.76
+      },
+      {
+        "reason": "Lost Luggage",
+        "count": 661,
+        "percentage": 8.37
       }
     ],
     "timeline": [
       {
         "date": "2015-02-17",
-        "positive": 86,
-        "neutral": 85,
-        "negative": 213,
-        "total": 384,
-        "net_sentiment_score": -33.07,
-        "reputation_index": 33.46
+        "positive": 186,
+        "neutral": 184,
+        "negative": 367,
+        "total": 737,
+        "net_sentiment_score": -24.56,
+        "reputation_index": 37.72
       },
       {
         "date": "2015-02-18",
-        "positive": 76,
-        "neutral": 106,
-        "negative": 110,
-        "total": 292,
-        "net_sentiment_score": -11.64,
-        "reputation_index": 44.18
+        "positive": 270,
+        "neutral": 276,
+        "negative": 493,
+        "total": 1039,
+        "net_sentiment_score": -21.46,
+        "reputation_index": 39.27
       },
       {
         "date": "2015-02-19",
-        "positive": 96,
-        "neutral": 94,
-        "negative": 127,
-        "total": 317,
-        "net_sentiment_score": -9.78,
-        "reputation_index": 45.11
+        "positive": 236,
+        "neutral": 307,
+        "negative": 516,
+        "total": 1059,
+        "net_sentiment_score": -26.44,
+        "reputation_index": 36.78
       },
       {
         "date": "2015-02-20",
-        "positive": 77,
-        "neutral": 110,
-        "negative": 132,
-        "total": 319,
-        "net_sentiment_score": -17.24,
-        "reputation_index": 41.38
+        "positive": 286,
+        "neutral": 295,
+        "negative": 486,
+        "total": 1067,
+        "net_sentiment_score": -18.74,
+        "reputation_index": 40.63
       },
       {
         "date": "2015-02-21",
-        "positive": 53,
-        "neutral": 60,
-        "negative": 257,
-        "total": 370,
-        "net_sentiment_score": -55.14,
-        "reputation_index": 22.43
+        "positive": 256,
+        "neutral": 287,
+        "negative": 514,
+        "total": 1057,
+        "net_sentiment_score": -24.41,
+        "reputation_index": 37.8
       },
       {
         "date": "2015-02-22",
-        "positive": 73,
-        "neutral": 77,
-        "negative": 129,
-        "total": 279,
-        "net_sentiment_score": -20.07,
-        "reputation_index": 39.96
+        "positive": 1163,
+        "neutral": 1437,
+        "negative": 2455,
+        "total": 5055,
+        "net_sentiment_score": -25.56,
+        "reputation_index": 37.22
       },
       {
         "date": "2015-02-23",
-        "positive": 77,
-        "neutral": 83,
-        "negative": 116,
-        "total": 276,
-        "net_sentiment_score": -14.13,
-        "reputation_index": 42.93
+        "positive": 247,
+        "neutral": 265,
+        "negative": 539,
+        "total": 1051,
+        "net_sentiment_score": -27.78,
+        "reputation_index": 36.11
       },
       {
         "date": "2015-02-24",
-        "positive": 32,
-        "neutral": 49,
-        "negative": 102,
-        "total": 183,
-        "net_sentiment_score": -38.25,
-        "reputation_index": 30.87
+        "positive": 223,
+        "neutral": 305,
+        "negative": 551,
+        "total": 1079,
+        "net_sentiment_score": -30.4,
+        "reputation_index": 34.8
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 247,
+        "neutral": 281,
+        "negative": 530,
+        "total": 1058,
+        "net_sentiment_score": -26.75,
+        "reputation_index": 36.63
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 289,
+        "neutral": 276,
+        "negative": 500,
+        "total": 1065,
+        "net_sentiment_score": -19.81,
+        "reputation_index": 40.09
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 249,
+        "neutral": 290,
+        "negative": 515,
+        "total": 1054,
+        "net_sentiment_score": -25.24,
+        "reputation_index": 37.38
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 261,
+        "neutral": 254,
+        "negative": 432,
+        "total": 947,
+        "net_sentiment_score": -18.06,
+        "reputation_index": 40.97
       }
     ]
   },
@@ -363,115 +471,151 @@
       "code": "US"
     },
     "metrics": {
-      "total_tweets": 2913,
+      "total_tweets": 19225,
       "sentiment_counts": {
-        "positive": 269,
-        "neutral": 381,
-        "negative": 2263
+        "positive": 1764,
+        "neutral": 2437,
+        "negative": 15024
       },
-      "net_sentiment_score": -68.45,
-      "reputation_index": 15.77,
-      "complaint_rate": 77.69
+      "net_sentiment_score": -68.97,
+      "reputation_index": 15.51,
+      "complaint_rate": 78.15
     },
     "top_complaint_reasons": [
       {
         "reason": "Customer Service Issue",
-        "count": 811,
-        "percentage": 35.84
+        "count": 4853,
+        "percentage": 32.3
       },
       {
         "reason": "Late Flight",
-        "count": 453,
-        "percentage": 20.02
+        "count": 2912,
+        "percentage": 19.38
       },
       {
         "reason": "Can't Tell",
-        "count": 246,
-        "percentage": 10.87
+        "count": 1942,
+        "percentage": 12.93
       },
       {
         "reason": "Cancelled Flight",
-        "count": 189,
-        "percentage": 8.35
+        "count": 1482,
+        "percentage": 9.86
       },
       {
         "reason": "Lost Luggage",
-        "count": 154,
-        "percentage": 6.81
+        "count": 1216,
+        "percentage": 8.09
       }
     ],
     "timeline": [
       {
         "date": "2015-02-17",
-        "positive": 48,
-        "neutral": 30,
-        "negative": 233,
-        "total": 311,
-        "net_sentiment_score": -59.49,
-        "reputation_index": 20.26
+        "positive": 63,
+        "neutral": 100,
+        "negative": 639,
+        "total": 802,
+        "net_sentiment_score": -71.82,
+        "reputation_index": 14.09
       },
       {
         "date": "2015-02-18",
-        "positive": 41,
-        "neutral": 32,
-        "negative": 244,
-        "total": 317,
-        "net_sentiment_score": -64.04,
-        "reputation_index": 17.98
+        "positive": 95,
+        "neutral": 167,
+        "negative": 919,
+        "total": 1181,
+        "net_sentiment_score": -69.77,
+        "reputation_index": 15.11
       },
       {
         "date": "2015-02-19",
-        "positive": 32,
-        "neutral": 54,
-        "negative": 193,
-        "total": 279,
-        "net_sentiment_score": -57.71,
-        "reputation_index": 21.15
+        "positive": 122,
+        "neutral": 139,
+        "negative": 1001,
+        "total": 1262,
+        "net_sentiment_score": -69.65,
+        "reputation_index": 15.17
       },
       {
         "date": "2015-02-20",
-        "positive": 33,
-        "neutral": 52,
-        "negative": 248,
-        "total": 333,
-        "net_sentiment_score": -64.56,
-        "reputation_index": 17.72
+        "positive": 118,
+        "neutral": 160,
+        "negative": 998,
+        "total": 1276,
+        "net_sentiment_score": -68.97,
+        "reputation_index": 15.52
       },
       {
         "date": "2015-02-21",
-        "positive": 30,
-        "neutral": 39,
-        "negative": 291,
-        "total": 360,
-        "net_sentiment_score": -72.5,
-        "reputation_index": 13.75
+        "positive": 118,
+        "neutral": 138,
+        "negative": 891,
+        "total": 1147,
+        "net_sentiment_score": -67.39,
+        "reputation_index": 16.3
       },
       {
         "date": "2015-02-22",
-        "positive": 27,
-        "neutral": 60,
-        "negative": 561,
-        "total": 648,
-        "net_sentiment_score": -82.41,
-        "reputation_index": 8.8
+        "positive": 550,
+        "neutral": 769,
+        "negative": 4857,
+        "total": 6176,
+        "net_sentiment_score": -69.74,
+        "reputation_index": 15.13
       },
       {
         "date": "2015-02-23",
-        "positive": 42,
-        "neutral": 74,
-        "negative": 372,
-        "total": 488,
-        "net_sentiment_score": -67.62,
-        "reputation_index": 16.19
+        "positive": 106,
+        "neutral": 186,
+        "negative": 936,
+        "total": 1228,
+        "net_sentiment_score": -67.59,
+        "reputation_index": 16.21
       },
       {
         "date": "2015-02-24",
-        "positive": 16,
-        "neutral": 40,
-        "negative": 121,
-        "total": 177,
-        "net_sentiment_score": -59.32,
-        "reputation_index": 20.34
+        "positive": 124,
+        "neutral": 160,
+        "negative": 982,
+        "total": 1266,
+        "net_sentiment_score": -67.77,
+        "reputation_index": 16.11
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 119,
+        "neutral": 165,
+        "negative": 981,
+        "total": 1265,
+        "net_sentiment_score": -68.14,
+        "reputation_index": 15.93
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 136,
+        "neutral": 150,
+        "negative": 991,
+        "total": 1277,
+        "net_sentiment_score": -66.95,
+        "reputation_index": 16.52
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 114,
+        "neutral": 166,
+        "negative": 957,
+        "total": 1237,
+        "net_sentiment_score": -68.15,
+        "reputation_index": 15.93
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 99,
+        "neutral": 137,
+        "negative": 872,
+        "total": 1108,
+        "net_sentiment_score": -69.77,
+        "reputation_index": 15.12
       }
     ]
   },
@@ -482,124 +626,151 @@
       "code": "UA"
     },
     "metrics": {
-      "total_tweets": 3822,
+      "total_tweets": 24555,
       "sentiment_counts": {
-        "positive": 492,
-        "neutral": 697,
-        "negative": 2633
+        "positive": 3109,
+        "neutral": 4413,
+        "negative": 17033
       },
-      "net_sentiment_score": -56.02,
-      "reputation_index": 21.99,
-      "complaint_rate": 68.89
+      "net_sentiment_score": -56.71,
+      "reputation_index": 21.65,
+      "complaint_rate": 69.37
     },
     "top_complaint_reasons": [
       {
         "reason": "Customer Service Issue",
-        "count": 681,
-        "percentage": 25.86
+        "count": 5443,
+        "percentage": 31.96
       },
       {
         "reason": "Late Flight",
-        "count": 525,
-        "percentage": 19.94
+        "count": 3293,
+        "percentage": 19.33
       },
       {
         "reason": "Can't Tell",
-        "count": 379,
-        "percentage": 14.39
+        "count": 2208,
+        "percentage": 12.96
+      },
+      {
+        "reason": "Cancelled Flight",
+        "count": 1578,
+        "percentage": 9.26
       },
       {
         "reason": "Lost Luggage",
-        "count": 269,
-        "percentage": 10.22
-      },
-      {
-        "reason": "Bad Flight",
-        "count": 216,
-        "percentage": 8.2
+        "count": 1392,
+        "percentage": 8.17
       }
     ],
     "timeline": [
       {
-        "date": "2015-02-16",
-        "positive": 0,
-        "neutral": 0,
-        "negative": 2,
-        "total": 2,
-        "net_sentiment_score": -100.0,
-        "reputation_index": 0.0
-      },
-      {
         "date": "2015-02-17",
-        "positive": 49,
-        "neutral": 75,
-        "negative": 272,
-        "total": 396,
-        "net_sentiment_score": -56.31,
-        "reputation_index": 21.84
+        "positive": 160,
+        "neutral": 198,
+        "negative": 723,
+        "total": 1081,
+        "net_sentiment_score": -52.08,
+        "reputation_index": 23.96
       },
       {
         "date": "2015-02-18",
-        "positive": 59,
-        "neutral": 90,
-        "negative": 257,
-        "total": 406,
-        "net_sentiment_score": -48.77,
-        "reputation_index": 25.62
+        "positive": 197,
+        "neutral": 278,
+        "negative": 1109,
+        "total": 1584,
+        "net_sentiment_score": -57.58,
+        "reputation_index": 21.21
       },
       {
         "date": "2015-02-19",
-        "positive": 69,
-        "neutral": 85,
-        "negative": 272,
-        "total": 426,
-        "net_sentiment_score": -47.65,
-        "reputation_index": 26.17
+        "positive": 168,
+        "neutral": 315,
+        "negative": 1131,
+        "total": 1614,
+        "net_sentiment_score": -59.67,
+        "reputation_index": 20.17
       },
       {
         "date": "2015-02-20",
-        "positive": 85,
-        "neutral": 99,
-        "negative": 342,
-        "total": 526,
-        "net_sentiment_score": -48.86,
-        "reputation_index": 25.57
+        "positive": 207,
+        "neutral": 295,
+        "negative": 1097,
+        "total": 1599,
+        "net_sentiment_score": -55.66,
+        "reputation_index": 22.17
       },
       {
         "date": "2015-02-21",
-        "positive": 53,
-        "neutral": 88,
-        "negative": 365,
-        "total": 506,
-        "net_sentiment_score": -61.66,
-        "reputation_index": 19.17
+        "positive": 188,
+        "neutral": 258,
+        "negative": 1123,
+        "total": 1569,
+        "net_sentiment_score": -59.59,
+        "reputation_index": 20.2
       },
       {
         "date": "2015-02-22",
-        "positive": 69,
-        "neutral": 102,
-        "negative": 532,
-        "total": 703,
-        "net_sentiment_score": -65.86,
-        "reputation_index": 17.07
+        "positive": 981,
+        "neutral": 1383,
+        "negative": 5326,
+        "total": 7690,
+        "net_sentiment_score": -56.5,
+        "reputation_index": 21.75
       },
       {
         "date": "2015-02-23",
-        "positive": 83,
-        "neutral": 109,
-        "negative": 449,
-        "total": 641,
-        "net_sentiment_score": -57.1,
-        "reputation_index": 21.45
+        "positive": 214,
+        "neutral": 266,
+        "negative": 1094,
+        "total": 1574,
+        "net_sentiment_score": -55.91,
+        "reputation_index": 22.05
       },
       {
         "date": "2015-02-24",
-        "positive": 25,
-        "neutral": 49,
-        "negative": 142,
-        "total": 216,
-        "net_sentiment_score": -54.17,
-        "reputation_index": 22.92
+        "positive": 185,
+        "neutral": 302,
+        "negative": 1117,
+        "total": 1604,
+        "net_sentiment_score": -58.1,
+        "reputation_index": 20.95
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 213,
+        "neutral": 284,
+        "negative": 1110,
+        "total": 1607,
+        "net_sentiment_score": -55.82,
+        "reputation_index": 22.09
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 204,
+        "neutral": 299,
+        "negative": 1073,
+        "total": 1576,
+        "net_sentiment_score": -55.14,
+        "reputation_index": 22.43
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 213,
+        "neutral": 271,
+        "negative": 1088,
+        "total": 1572,
+        "net_sentiment_score": -55.66,
+        "reputation_index": 22.17
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 179,
+        "neutral": 264,
+        "negative": 1042,
+        "total": 1485,
+        "net_sentiment_score": -58.11,
+        "reputation_index": 20.94
       }
     ]
   },
@@ -610,115 +781,151 @@
       "code": "VA"
     },
     "metrics": {
-      "total_tweets": 504,
+      "total_tweets": 2821,
       "sentiment_counts": {
-        "positive": 152,
-        "neutral": 171,
-        "negative": 181
+        "positive": 940,
+        "neutral": 1011,
+        "negative": 870
       },
-      "net_sentiment_score": -5.75,
-      "reputation_index": 47.12,
-      "complaint_rate": 35.91
+      "net_sentiment_score": 2.48,
+      "reputation_index": 51.24,
+      "complaint_rate": 30.84
     },
     "top_complaint_reasons": [
       {
         "reason": "Customer Service Issue",
-        "count": 60,
-        "percentage": 33.15
+        "count": 279,
+        "percentage": 32.07
       },
       {
-        "reason": "Flight Booking Problems",
-        "count": 28,
-        "percentage": 15.47
+        "reason": "Late Flight",
+        "count": 177,
+        "percentage": 20.34
       },
       {
         "reason": "Can't Tell",
-        "count": 22,
-        "percentage": 12.15
-      },
-      {
-        "reason": "Bad Flight",
-        "count": 19,
-        "percentage": 10.5
+        "count": 113,
+        "percentage": 12.99
       },
       {
         "reason": "Cancelled Flight",
-        "count": 18,
-        "percentage": 9.94
+        "count": 83,
+        "percentage": 9.54
+      },
+      {
+        "reason": "Lost Luggage",
+        "count": 65,
+        "percentage": 7.47
       }
     ],
     "timeline": [
       {
         "date": "2015-02-17",
-        "positive": 21,
-        "neutral": 21,
-        "negative": 12,
-        "total": 54,
-        "net_sentiment_score": 16.67,
-        "reputation_index": 58.33
+        "positive": 43,
+        "neutral": 33,
+        "negative": 35,
+        "total": 111,
+        "net_sentiment_score": 7.21,
+        "reputation_index": 53.6
       },
       {
         "date": "2015-02-18",
-        "positive": 20,
-        "neutral": 21,
-        "negative": 19,
-        "total": 60,
-        "net_sentiment_score": 1.67,
-        "reputation_index": 50.83
+        "positive": 62,
+        "neutral": 74,
+        "negative": 64,
+        "total": 200,
+        "net_sentiment_score": -1.0,
+        "reputation_index": 49.5
       },
       {
         "date": "2015-02-19",
-        "positive": 20,
-        "neutral": 26,
-        "negative": 24,
-        "total": 70,
-        "net_sentiment_score": -5.71,
-        "reputation_index": 47.14
+        "positive": 70,
+        "neutral": 70,
+        "negative": 64,
+        "total": 204,
+        "net_sentiment_score": 2.94,
+        "reputation_index": 51.47
       },
       {
         "date": "2015-02-20",
-        "positive": 17,
-        "neutral": 32,
-        "negative": 21,
-        "total": 70,
-        "net_sentiment_score": -5.71,
-        "reputation_index": 47.14
+        "positive": 61,
+        "neutral": 48,
+        "negative": 54,
+        "total": 163,
+        "net_sentiment_score": 4.29,
+        "reputation_index": 52.15
       },
       {
         "date": "2015-02-21",
-        "positive": 28,
-        "neutral": 12,
-        "negative": 37,
-        "total": 77,
-        "net_sentiment_score": -11.69,
-        "reputation_index": 44.16
+        "positive": 56,
+        "neutral": 64,
+        "negative": 68,
+        "total": 188,
+        "net_sentiment_score": -6.38,
+        "reputation_index": 46.81
       },
       {
         "date": "2015-02-22",
-        "positive": 10,
-        "neutral": 16,
-        "negative": 27,
-        "total": 53,
-        "net_sentiment_score": -32.08,
-        "reputation_index": 33.96
+        "positive": 280,
+        "neutral": 313,
+        "negative": 272,
+        "total": 865,
+        "net_sentiment_score": 0.92,
+        "reputation_index": 50.46
       },
       {
         "date": "2015-02-23",
-        "positive": 23,
-        "neutral": 37,
-        "negative": 31,
-        "total": 91,
-        "net_sentiment_score": -8.79,
-        "reputation_index": 45.6
+        "positive": 65,
+        "neutral": 65,
+        "negative": 58,
+        "total": 188,
+        "net_sentiment_score": 3.72,
+        "reputation_index": 51.86
       },
       {
         "date": "2015-02-24",
-        "positive": 13,
-        "neutral": 6,
-        "negative": 10,
-        "total": 29,
-        "net_sentiment_score": 10.34,
-        "reputation_index": 55.17
+        "positive": 78,
+        "neutral": 68,
+        "negative": 52,
+        "total": 198,
+        "net_sentiment_score": 13.13,
+        "reputation_index": 56.57
+      },
+      {
+        "date": "2015-02-25",
+        "positive": 56,
+        "neutral": 72,
+        "negative": 50,
+        "total": 178,
+        "net_sentiment_score": 3.37,
+        "reputation_index": 51.69
+      },
+      {
+        "date": "2015-02-26",
+        "positive": 51,
+        "neutral": 69,
+        "negative": 52,
+        "total": 172,
+        "net_sentiment_score": -0.58,
+        "reputation_index": 49.71
+      },
+      {
+        "date": "2015-02-27",
+        "positive": 51,
+        "neutral": 63,
+        "negative": 58,
+        "total": 172,
+        "net_sentiment_score": -4.07,
+        "reputation_index": 47.97
+      },
+      {
+        "date": "2015-02-28",
+        "positive": 67,
+        "neutral": 72,
+        "negative": 43,
+        "total": 182,
+        "net_sentiment_score": 13.19,
+        "reputation_index": 56.59
       }
     ]
   }

@@ -6,32 +6,32 @@
   },
   "benchmarks": [
     {
-      "workload_size": 14485,
+      "workload_size": 95311,
       "workload_label": "1x (Original)",
-      "pandas_time_ms": 15.57,
-      "pyspark_time_ms": 1153.34,
-      "speedup": 0.01
+      "pandas_time_ms": 64.65,
+      "pyspark_time_ms": 1163.85,
+      "speedup": 0.06
     },
     {
-      "workload_size": 28970,
+      "workload_size": 190622,
       "workload_label": "2x Workload",
-      "pandas_time_ms": 28.52,
-      "pyspark_time_ms": 1156.11,
-      "speedup": 0.02
+      "pandas_time_ms": 129.5,
+      "pyspark_time_ms": 1177.75,
+      "speedup": 0.11
     },
     {
-      "workload_size": 72425,
+      "workload_size": 476555,
       "workload_label": "5x Workload",
-      "pandas_time_ms": 58.08,
-      "pyspark_time_ms": 1162.45,
-      "speedup": 0.05
+      "pandas_time_ms": 343.72,
+      "pyspark_time_ms": 1223.65,
+      "speedup": 0.28
     },
     {
-      "workload_size": 144850,
+      "workload_size": 953110,
       "workload_label": "10x Workload",
-      "pandas_time_ms": 99.4,
-      "pyspark_time_ms": 1171.3,
-      "speedup": 0.08
+      "pandas_time_ms": 645.15,
+      "pyspark_time_ms": 1288.25,
+      "speedup": 0.5
     }
   ]
 }
