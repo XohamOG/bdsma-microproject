@@ -14,10 +14,12 @@ import {
   Database,
   FileText,
   Compass,
+  BookOpen,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Overview', icon: LayoutDashboard },
+  { href: '/bdsma', label: 'BDSMA Subject Lab', icon: BookOpen },
   { href: '/brands', label: 'Brand Directory', icon: Plane },
   { href: '/sentiment', label: 'Sentiment & Complaints', icon: PieChart },
   { href: '/trends', label: 'Trends & Anomalies', icon: TrendingUp },

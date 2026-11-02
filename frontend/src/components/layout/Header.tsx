@@ -13,14 +13,17 @@ export const Header: React.FC<Props> = ({ selectedBrand = 'all', onBrandChange, 
   return (
     <header className="h-16 border-b border-nouveau-gold/30 bg-nouveau-ivory/80 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-20">
       {/* Left: System Status & Scope */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         <div className="flex items-center gap-2 text-xs font-mono bg-nouveau-cream px-3 py-1.5 rounded-[12px] border border-nouveau-gold/40 text-nouveau-charcoal shadow-sm">
           <Calendar className="w-3.5 h-3.5 text-nouveau-teal" />
-          <span>Historical Horizon: Feb 17 – Feb 24, 2015</span>
+          <span>Feb 17 – Feb 24, 2015</span>
         </div>
         <div className="hidden md:flex items-center gap-1.5 text-xs font-mono text-nouveau-charcoal/70 bg-nouveau-ivory px-2.5 py-1 rounded-[12px] border border-nouveau-gold/20">
           <Database className="w-3 h-3 text-nouveau-gold" />
-          <span>14,640 Verified Records</span>
+          <span>14,640 Records</span>
+        </div>
+        <div className="hidden lg:flex items-center gap-1.5 text-[11px] font-mono text-nouveau-teal bg-nouveau-teal/10 px-2.5 py-1 rounded-[12px] border border-nouveau-teal/30">
+          <span>BDSMA Microproject</span>
         </div>
       </div>
 
