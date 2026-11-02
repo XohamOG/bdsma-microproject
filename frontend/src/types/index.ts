@@ -137,6 +137,7 @@ export interface Tweet {
   sentiment_confidence: number;
   negativereason: string | null;
   text: string;
+  name?: string | null;
   tweet_created: string;
   tweet_location?: string | null;
   user_timezone?: string | null;

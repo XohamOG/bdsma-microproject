@@ -34,22 +34,10 @@
 
 /* Ornamental Art Nouveau Divider */
 .nouveau-divider {
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #CFB53B 50%, transparent 100%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #CFB53B40 50%, transparent 100%);
   position: relative;
-  margin: 2rem 0;
-}
-
-.nouveau-divider::after {
-  content: "♦";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFF0;
-  padding: 0 0.75rem;
-  color: #CFB53B;
-  font-size: 0.85rem;
+  margin: 1.5rem 0;
 }
 
 /* Whiplash curve border utility */

@@ -57,10 +57,8 @@ export default function TrendsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-nouveau-gold/30 pb-6">
         <div>
-          <div className="flex items-center gap-2 text-nouveau-gold text-xs font-serif uppercase tracking-widest mb-1">
-            <span>♦</span>
+          <div className="flex items-center gap-2 text-nouveau-teal text-xs font-mono font-semibold uppercase tracking-wider mb-1">
             <span>Statistical Volatility & Anomalies</span>
-            <span>♦</span>
           </div>
           <h1 className="font-display font-bold text-3xl text-nouveau-charcoal">
             Historical Trends & Anomaly Detection

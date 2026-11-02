@@ -24,25 +24,29 @@ import {
 } from '@/mock/data';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK !== 'false';
+// Default to FALSE so real live Big Data backend API is queried!
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === 'true';
 
 async function fetchWithFallback<T>(endpoint: string, mockFallback: T): Promise<T> {
   if (USE_MOCK) {
-    // Simulated realistic network latency
-    await new Promise((resolve) => setTimeout(resolve, 150));
     return mockFallback;
   }
 
   try {
-    const res = await fetch(`${BASE_URL}${endpoint}`);
+    const res = await fetch(`${BASE_URL}${endpoint}`, {
+      headers: {
+        'Accept': 'application/json',
+      },
+      cache: 'no-store',
+    });
     if (!res.ok) {
-      console.warn(`[API] Endpoint ${endpoint} returned ${res.status}. Falling back to mock data.`);
+      console.warn(`[API] Endpoint ${endpoint} returned status ${res.status}. Using fallback.`);
       return mockFallback;
     }
     const json: ApiResponse<T> = await res.json();
-    return json.data;
+    return json.data !== undefined ? json.data : mockFallback;
   } catch (err) {
-    console.warn(`[API] Failed to fetch ${endpoint} (${err}). Falling back to mock data.`);
+    console.warn(`[API] Failed to fetch ${endpoint} (${err}). Using fallback.`);
     return mockFallback;
   }
 }
@@ -55,13 +59,18 @@ export const apiService = {
       dataset: {
         name: 'Twitter US Airline Sentiment',
         total_records: 14640,
+        cleaned_records: 14485,
+        brands_count: 6,
         date_range: { start: '2015-02-17', end: '2015-02-24' },
       },
     });
   },
 
   async getBrands(): Promise<Brand[]> {
-    return fetchWithFallback('/brands', MOCK_BRANDS);
+    const data = await fetchWithFallback<any>('/brands', { brands: MOCK_BRANDS });
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.brands)) return data.brands;
+    return MOCK_BRANDS;
   },
 
   async getBrandReputation(brandId: string): Promise<BrandDetail | null> {
@@ -70,22 +79,24 @@ export const apiService = {
   },
 
   async getSentimentAnalytics(brand?: string): Promise<SentimentAnalytics> {
-    const endpoint = brand ? `/analytics/sentiment?brand=${brand}` : '/analytics/sentiment';
+    const endpoint = brand && brand !== 'all' ? `/analytics/sentiment?brand=${brand}` : '/analytics/sentiment';
     return fetchWithFallback(endpoint, MOCK_GLOBAL_SENTIMENT);
   },
 
   async getHistoricalTrends(brand?: string): Promise<HistoricalTrends> {
-    const endpoint = brand ? `/analytics/trends?brand=${brand}` : '/analytics/trends';
+    const endpoint = brand && brand !== 'all' ? `/analytics/trends?brand=${brand}` : '/analytics/trends';
     return fetchWithFallback(endpoint, MOCK_HISTORICAL_TRENDS);
   },
 
-  async getComplaints(brand?: string): Promise<ComplaintAnalytics> {
-    const endpoint = brand ? `/analytics/complaints?brand=${brand}` : '/analytics/complaints';
+  async getComplaints(brand?: string, limit: number = 10): Promise<ComplaintAnalytics> {
+    const endpoint = brand && brand !== 'all' 
+      ? `/analytics/complaints?brand=${brand}&limit=${limit}` 
+      : `/analytics/complaints?limit=${limit}`;
     return fetchWithFallback(endpoint, MOCK_COMPLAINTS);
   },
 
   async getBrandComparison(brandIds?: string[]): Promise<BrandComparison> {
-    const brandsQuery = brandIds ? `?brands=${brandIds.join(',')}` : '';
+    const brandsQuery = brandIds && brandIds.length > 0 ? `?brands=${brandIds.join(',')}` : '';
     const fallback: BrandComparison = {
       comparison: MOCK_BRANDS.map((b) => ({
         brand: b.name,
@@ -105,16 +116,60 @@ export const apiService = {
   },
 
   async getAnomalies(brand?: string): Promise<AnomalyEvent[]> {
-    const endpoint = brand ? `/analytics/anomalies?brand=${brand}` : '/analytics/anomalies';
-    return fetchWithFallback(endpoint, MOCK_ANOMALIES);
+    const endpoint = brand && brand !== 'all' ? `/analytics/anomalies?brand=${brand}` : '/analytics/anomalies';
+    try {
+      const data = await fetchWithFallback<{ anomalies: AnomalyEvent[] } | AnomalyEvent[]>(endpoint, { anomalies: MOCK_ANOMALIES });
+      if (Array.isArray(data)) return data;
+      if (data && Array.isArray(data.anomalies)) return data.anomalies;
+      return MOCK_ANOMALIES;
+    } catch {
+      return MOCK_ANOMALIES;
+    }
   },
 
-  async getTweets(params?: { brand?: string; sentiment?: string; page?: number; limit?: number }): Promise<{
+  async getTweets(params?: { 
+    brand?: string; 
+    sentiment?: string; 
+    reason?: string;
+    search?: string;
+    page?: number; 
+    limit?: number 
+  }): Promise<{
     tweets: Tweet[];
     total: number;
     page: number;
     totalPages: number;
   }> {
+    const query = new URLSearchParams();
+    if (params?.page) query.set('page', String(params.page));
+    if (params?.limit) query.set('limit', String(params.limit));
+    if (params?.brand && params.brand !== 'all') query.set('brand', params.brand);
+    if (params?.sentiment && params.sentiment !== 'all') query.set('sentiment', params.sentiment);
+    if (params?.reason && params.reason !== 'all') query.set('reason', params.reason);
+    if (params?.search) query.set('search', params.search);
+
+    const queryString = query.toString() ? `?${query.toString()}` : '';
+
+    try {
+      if (!USE_MOCK) {
+        const res = await fetch(`${BASE_URL}/tweets${queryString}`, { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && json.data) {
+            return {
+              tweets: json.data.tweets || [],
+              total: json.data.pagination?.total || 0,
+              page: json.data.pagination?.page || 1,
+              totalPages: json.data.pagination?.total_pages || 1,
+            };
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('[API] /tweets request failed, using mock data:', e);
+    }
+
+    // Local fallback filter
     let filtered = [...MOCK_TWEETS_SAMPLE];
     if (params?.brand && params.brand !== 'all') {
       filtered = filtered.filter((t) => t.airline.toLowerCase().includes(params.brand!.toLowerCase()));
@@ -122,34 +177,39 @@ export const apiService = {
     if (params?.sentiment && params.sentiment !== 'all') {
       filtered = filtered.filter((t) => t.airline_sentiment === params.sentiment);
     }
+    if (params?.search) {
+      const q = params.search.toLowerCase();
+      filtered = filtered.filter((t) => t.text.toLowerCase().includes(q) || t.name?.toLowerCase().includes(q));
+    }
+
+    const page = params?.page || 1;
+    const limit = params?.limit || 20;
+    const total = 14485;
+    const totalPages = Math.ceil(total / limit);
 
     return {
-      tweets: filtered,
-      total: 14640,
-      page: params?.page || 1,
-      totalPages: Math.ceil(14640 / (params?.limit || 20)),
+      tweets: filtered.slice(0, limit),
+      total,
+      page,
+      totalPages,
     };
   },
 
   async getBenchmarks(): Promise<Benchmark[]> {
-    return fetchWithFallback('/analytics/benchmarks', MOCK_BENCHMARKS);
+    try {
+      const res = await fetchWithFallback<{ benchmarks: Benchmark[] } | Benchmark[]>(
+        '/analytics/benchmarks', 
+        { benchmarks: MOCK_BENCHMARKS }
+      );
+      if (Array.isArray(res)) return res;
+      if (res && Array.isArray(res.benchmarks)) return res.benchmarks;
+      return MOCK_BENCHMARKS;
+    } catch {
+      return MOCK_BENCHMARKS;
+    }
   },
 
   async uploadDataset(file: File): Promise<DatasetUploadResult> {
-    if (USE_MOCK) {
-      await new Promise((resolve) => setTimeout(resolve, 800));
-      return {
-        filename: file.name,
-        total_rows_received: 14640,
-        valid_rows: 14640,
-        invalid_rows: 0,
-        ingestion_status: 'PROCESSED',
-        parquet_path: 'data/parquet/tweets.parquet',
-        brands_detected: ['Virgin America', 'United', 'Delta', 'Southwest', 'American', 'US Airways'],
-        message: 'Dataset successfully validated and ingested into analytics engine.',
-      };
-    }
-
     const formData = new FormData();
     formData.append('file', file);
     const res = await fetch(`${BASE_URL}/dataset/upload`, {

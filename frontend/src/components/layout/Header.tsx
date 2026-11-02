@@ -12,15 +12,13 @@ interface Props {
 export const Header: React.FC<Props> = ({ selectedBrand = 'all', onBrandChange, onRefresh }) => {
   return (
     <header className="h-16 border-b border-nouveau-gold/30 bg-nouveau-ivory/80 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-20">
-      {/* Left: System Status & Scope */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2 text-xs font-mono bg-nouveau-cream px-3 py-1.5 rounded-[12px] border border-nouveau-gold/40 text-nouveau-charcoal shadow-sm">
-          <Calendar className="w-3.5 h-3.5 text-nouveau-teal" />
-          <span>Historical Horizon: Feb 17 – Feb 24, 2015</span>
-        </div>
-        <div className="hidden md:flex items-center gap-1.5 text-xs font-mono text-nouveau-charcoal/70 bg-nouveau-ivory px-2.5 py-1 rounded-[12px] border border-nouveau-gold/20">
-          <Database className="w-3 h-3 text-nouveau-gold" />
-          <span>14,640 Verified Records</span>
+      {/* Left: Clean system indicator */}
+      <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 text-xs font-mono text-nouveau-charcoal/80 bg-nouveau-cream px-3 py-1.5 rounded-[10px] border border-nouveau-gold/30 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-nouveau-teal animate-pulse" />
+          <span className="font-semibold text-nouveau-teal">Realtime Engine</span>
+          <span className="text-nouveau-charcoal/40">•</span>
+          <span className="text-nouveau-charcoal/70">14,485 Verified Records</span>
         </div>
       </div>
 
