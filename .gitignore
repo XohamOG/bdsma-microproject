@@ -1,0 +1,9 @@
+# Agent Board machine-specific state
+agent-board/inbox.json
+agent-board/state.json
+agent-board/*.tmp
+agent-board/config.json
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
