@@ -1,0 +1,82 @@
+{
+  "brands": [
+    {
+      "id": "virgin_america",
+      "name": "Virgin America",
+      "code": "VA",
+      "total_tweets": 504,
+      "positive": 152,
+      "neutral": 171,
+      "negative": 181,
+      "net_sentiment_score": -5.75,
+      "reputation_index": 47.12,
+      "complaint_rate": 35.91,
+      "rank": 1
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "code": "DL",
+      "total_tweets": 2222,
+      "positive": 544,
+      "neutral": 723,
+      "negative": 955,
+      "net_sentiment_score": -18.5,
+      "reputation_index": 40.75,
+      "complaint_rate": 42.98,
+      "rank": 2
+    },
+    {
+      "id": "southwest",
+      "name": "Southwest",
+      "code": "WN",
+      "total_tweets": 2420,
+      "positive": 570,
+      "neutral": 664,
+      "negative": 1186,
+      "net_sentiment_score": -25.45,
+      "reputation_index": 37.27,
+      "complaint_rate": 49.01,
+      "rank": 3
+    },
+    {
+      "id": "united",
+      "name": "United",
+      "code": "UA",
+      "total_tweets": 3822,
+      "positive": 492,
+      "neutral": 697,
+      "negative": 2633,
+      "net_sentiment_score": -56.02,
+      "reputation_index": 21.99,
+      "complaint_rate": 68.89,
+      "rank": 4
+    },
+    {
+      "id": "american",
+      "name": "American",
+      "code": "AA",
+      "total_tweets": 2604,
+      "positive": 307,
+      "neutral": 433,
+      "negative": 1864,
+      "net_sentiment_score": -59.79,
+      "reputation_index": 20.1,
+      "complaint_rate": 71.58,
+      "rank": 5
+    },
+    {
+      "id": "us_airways",
+      "name": "US Airways",
+      "code": "US",
+      "total_tweets": 2913,
+      "positive": 269,
+      "neutral": 381,
+      "negative": 2263,
+      "net_sentiment_score": -68.45,
+      "reputation_index": 15.77,
+      "complaint_rate": 77.69,
+      "rank": 6
+    }
+  ]
+}

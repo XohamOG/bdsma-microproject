@@ -1,0 +1,87 @@
+{
+  "interval": "daily",
+  "brand": "all",
+  "timeline": [
+    {
+      "date": "2015-02-16",
+      "positive": 0,
+      "neutral": 1,
+      "negative": 3,
+      "total": 4,
+      "net_sentiment_score": -75.0,
+      "reputation_index": 12.5
+    },
+    {
+      "date": "2015-02-17",
+      "positive": 273,
+      "neutral": 297,
+      "negative": 838,
+      "total": 1408,
+      "net_sentiment_score": -40.13,
+      "reputation_index": 29.94
+    },
+    {
+      "date": "2015-02-18",
+      "positive": 273,
+      "neutral": 335,
+      "negative": 736,
+      "total": 1344,
+      "net_sentiment_score": -34.45,
+      "reputation_index": 32.78
+    },
+    {
+      "date": "2015-02-19",
+      "positive": 296,
+      "neutral": 329,
+      "negative": 751,
+      "total": 1376,
+      "net_sentiment_score": -33.07,
+      "reputation_index": 33.47
+    },
+    {
+      "date": "2015-02-20",
+      "positive": 282,
+      "neutral": 383,
+      "negative": 835,
+      "total": 1500,
+      "net_sentiment_score": -36.87,
+      "reputation_index": 31.57
+    },
+    {
+      "date": "2015-02-21",
+      "positive": 230,
+      "neutral": 278,
+      "negative": 1049,
+      "total": 1557,
+      "net_sentiment_score": -52.6,
+      "reputation_index": 23.7
+    },
+    {
+      "date": "2015-02-22",
+      "positive": 349,
+      "neutral": 463,
+      "negative": 2261,
+      "total": 3073,
+      "net_sentiment_score": -62.22,
+      "reputation_index": 18.89
+    },
+    {
+      "date": "2015-02-23",
+      "positive": 433,
+      "neutral": 676,
+      "negative": 1917,
+      "total": 3026,
+      "net_sentiment_score": -49.04,
+      "reputation_index": 25.48
+    },
+    {
+      "date": "2015-02-24",
+      "positive": 198,
+      "neutral": 307,
+      "negative": 692,
+      "total": 1197,
+      "net_sentiment_score": -41.27,
+      "reputation_index": 29.37
+    }
+  ]
+}

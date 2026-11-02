@@ -7,3 +7,17 @@ agent-board/config.json
 __pycache__/
 *.py[cod]
 *$py.class
+venv/
+.venv/
+
+# Node dependencies & logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment & secrets
+.env
+.env.local
+*.tmp

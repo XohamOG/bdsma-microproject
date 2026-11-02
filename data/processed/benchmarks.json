@@ -1,0 +1,37 @@
+{
+  "system_info": {
+    "cpu_cores": 16,
+    "ram_gb": 15.7,
+    "spark_version": "3.5 / 4.0"
+  },
+  "benchmarks": [
+    {
+      "workload_size": 14485,
+      "workload_label": "1x (Original)",
+      "pandas_time_ms": 15.57,
+      "pyspark_time_ms": 1153.34,
+      "speedup": 0.01
+    },
+    {
+      "workload_size": 28970,
+      "workload_label": "2x Workload",
+      "pandas_time_ms": 28.52,
+      "pyspark_time_ms": 1156.11,
+      "speedup": 0.02
+    },
+    {
+      "workload_size": 72425,
+      "workload_label": "5x Workload",
+      "pandas_time_ms": 58.08,
+      "pyspark_time_ms": 1162.45,
+      "speedup": 0.05
+    },
+    {
+      "workload_size": 144850,
+      "workload_label": "10x Workload",
+      "pandas_time_ms": 99.4,
+      "pyspark_time_ms": 1171.3,
+      "speedup": 0.08
+    }
+  ]
+}

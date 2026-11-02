@@ -1,0 +1,55 @@
+{
+  "total_negative_tweets": 9082,
+  "categories": [
+    {
+      "reason": "Customer Service Issue",
+      "count": 2885,
+      "percentage": 31.77
+    },
+    {
+      "reason": "Late Flight",
+      "count": 1650,
+      "percentage": 18.17
+    },
+    {
+      "reason": "Can't Tell",
+      "count": 1176,
+      "percentage": 12.95
+    },
+    {
+      "reason": "Cancelled Flight",
+      "count": 829,
+      "percentage": 9.13
+    },
+    {
+      "reason": "Lost Luggage",
+      "count": 719,
+      "percentage": 7.92
+    },
+    {
+      "reason": "Bad Flight",
+      "count": 575,
+      "percentage": 6.33
+    },
+    {
+      "reason": "Flight Booking Problems",
+      "count": 523,
+      "percentage": 5.76
+    },
+    {
+      "reason": "Flight Attendant Complaints",
+      "count": 475,
+      "percentage": 5.23
+    },
+    {
+      "reason": "longlines",
+      "count": 177,
+      "percentage": 1.95
+    },
+    {
+      "reason": "Damaged Luggage",
+      "count": 73,
+      "percentage": 0.8
+    }
+  ]
+}
