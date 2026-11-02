@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Calendar, ShieldCheck, Database, RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 
 interface Props {
   selectedBrand?: string;
@@ -12,14 +12,11 @@ interface Props {
 export const Header: React.FC<Props> = ({ selectedBrand = 'all', onBrandChange, onRefresh }) => {
   return (
     <header className="h-16 border-b border-nouveau-gold/30 bg-nouveau-ivory/80 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-20">
-      {/* Left: Clean system indicator */}
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 text-xs font-mono text-nouveau-charcoal/80 bg-nouveau-cream px-3 py-1.5 rounded-[10px] border border-nouveau-gold/30 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-nouveau-teal animate-pulse" />
-          <span className="font-semibold text-nouveau-teal">Realtime Engine</span>
-          <span className="text-nouveau-charcoal/40">•</span>
-          <span className="text-nouveau-charcoal/70">14,485 Verified Records</span>
-        </div>
+      {/* Left: Clean, minimal title */}
+      <div className="flex items-center gap-2 text-xs font-display text-nouveau-charcoal/70">
+        <span className="font-semibold text-nouveau-teal">BDSMA</span>
+        <span className="text-nouveau-charcoal/40">/</span>
+        <span className="text-nouveau-charcoal/80">Social Media Analytics Platform</span>
       </div>
 
       {/* Right: Brand quick selector & refresh action */}
@@ -27,13 +24,13 @@ export const Header: React.FC<Props> = ({ selectedBrand = 'all', onBrandChange, 
         {onBrandChange && (
           <div className="flex items-center gap-2">
             <label htmlFor="brand-filter" className="text-xs font-display font-medium text-nouveau-charcoal/70 hidden sm:inline">
-              Scope:
+              Carrier:
             </label>
             <select
               id="brand-filter"
               value={selectedBrand}
               onChange={(e) => onBrandChange(e.target.value)}
-              className="bg-nouveau-cream border border-nouveau-gold text-nouveau-charcoal font-display text-xs rounded-[12px] px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-nouveau-teal/40 cursor-pointer shadow-sm"
+              className="bg-nouveau-cream border border-nouveau-gold text-nouveau-charcoal font-display text-xs rounded-[10px] px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-nouveau-teal/40 cursor-pointer shadow-sm"
             >
               <option value="all">All Monitored Carriers (6)</option>
               <option value="virgin_america">Virgin America (VA)</option>
@@ -50,16 +47,11 @@ export const Header: React.FC<Props> = ({ selectedBrand = 'all', onBrandChange, 
           <button
             onClick={onRefresh}
             title="Refresh Analytics"
-            className="p-1.5 rounded-[12px] border border-nouveau-gold/40 hover:border-nouveau-teal bg-nouveau-cream text-nouveau-charcoal hover:text-nouveau-teal transition-colors shadow-sm"
+            className="p-1.5 rounded-[10px] border border-nouveau-gold/40 hover:border-nouveau-teal bg-nouveau-cream text-nouveau-charcoal hover:text-nouveau-teal transition-colors shadow-sm"
           >
             <RefreshCw className="w-4 h-4" />
           </button>
         )}
-
-        <div className="flex items-center gap-1.5 text-xs font-display font-semibold text-nouveau-teal bg-nouveau-teal/10 px-3 py-1.5 rounded-[12px] border border-nouveau-teal/30">
-          <ShieldCheck className="w-4 h-4 text-nouveau-teal" />
-          <span>Verified Dataset</span>
-        </div>
       </div>
     </header>
   );

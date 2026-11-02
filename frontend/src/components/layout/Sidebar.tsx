@@ -9,11 +9,13 @@ import {
   BarChart3,
   MessageSquare,
   Cpu,
+  BookOpen,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Project Overview', icon: Compass },
   { href: '/dashboard', label: 'Live Analytics', icon: LayoutDashboard },
+  { href: '/bdsma', label: 'BDSMA Subject Lab', icon: BookOpen },
   { href: '/compare', label: 'Compare Airlines', icon: BarChart3 },
   { href: '/tweets', label: 'Tweet Explorer', icon: MessageSquare },
   { href: '/benchmarks', label: 'Big Data Benchmarks', icon: Cpu },
@@ -50,9 +52,10 @@ export const Sidebar: React.FC = () => {
         <nav className="mt-6 space-y-1.5">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
-            const isActive = item.href === '/' 
-              ? pathname === '/' 
-              : pathname === item.href || pathname?.startsWith(item.href);
+            const isActive =
+              item.href === '/'
+                ? pathname === '/'
+                : pathname === item.href || pathname?.startsWith(item.href);
 
             return (
               <Link
