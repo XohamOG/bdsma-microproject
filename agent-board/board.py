@@ -170,8 +170,11 @@ def cmd_task(args, config):
     task_id = args.id or get_next_task_id(repo, issue)
     desc = args.description.strip()
     expected = (args.expected or "Completed and verified implementation").strip()
+    contract = getattr(args, "contract", None)
     files = (args.files or "To be determined").strip()
     deps = (args.dependencies or "None").strip()
+
+    contract_section = f"API contract:\n{contract.strip()}\n\n" if contract else ""
 
     body = (
         f"[TASK: {task_id}]\n"
@@ -180,6 +183,7 @@ def cmd_task(args, config):
         f"STATUS: {status}\n\n"
         f"Description:\n{desc}\n\n"
         f"Expected outcome:\n{expected}\n\n"
+        f"{contract_section}"
         f"Files involved:\n{files}\n\n"
         f"Dependencies:\n{deps}"
     )
@@ -450,6 +454,7 @@ def main():
     p_task.add_argument("description", help="Description of the task")
     p_task.add_argument("--id", help="Task ID (e.g. TASK-001). Auto-generated if omitted")
     p_task.add_argument("--expected", help="Expected outcome / deliverables")
+    p_task.add_argument("--contract", help="API contract specification")
     p_task.add_argument("--files", help="Files involved / affected")
     p_task.add_argument("--dependencies", help="Dependencies or blockers")
     p_task.add_argument("--status", default="READY", help="Status (default: READY)")
