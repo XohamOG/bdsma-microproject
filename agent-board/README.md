@@ -66,7 +66,7 @@ python agent-board/poller.py -v
 
 **Poller Features:**
 - **First startup protection**: On first run, records all existing GitHub comments as "seen", preventing replay loops of old history.
-- **Genuine mention filtering**: Captures messages directed to `@xohamOG` while rejecting emails or substring matches.
+- **Genuine mention filtering**: Captures messages directed to the configured `username` (`@vedaXD` or `@xohamOG`) while rejecting emails or substring matches.
 - **Self-ignore**: Automatically ignores comments posted by the local account.
 - **Resilience**: Backs off gracefully on network/API drops without crashing.
 - **Safe by design**: Never executes message content in the shell.

@@ -309,8 +309,10 @@ def print_board_status(config):
     print("=" * 64)
     print(f"  Repository:      {repo}")
     print(f"  Board Issue:     #{issue}")
-    print(f"  Current User:    @{username} (PC 1)")
-    print(f"  Teammate:        @{teammate} (PC 2)")
+    user_machine = "PC 2 (Linux)" if str(username).lower() == "vedaxd" else "PC 1 (Windows)"
+    peer_machine = "PC 1 (Windows)" if str(username).lower() == "vedaxd" else "PC 2 (Linux)"
+    print(f"  Current User:    @{username} ({user_machine})")
+    print(f"  Teammate:        @{teammate} ({peer_machine})")
     print("-" * 64)
     print(f"  Poller State:")
     print(f"    - First run done: {state.get('first_run_completed', False)}")
@@ -444,7 +446,7 @@ def main():
 
     # 2. task
     p_task = subparsers.add_parser("task", help="Dispatch a structured task to a teammate")
-    p_task.add_argument("to_user", help="Teammate GitHub username (e.g. @vedaXD)")
+    p_task.add_argument("to_user", help="Teammate GitHub username (e.g. @xohamOG or @vedaXD)")
     p_task.add_argument("description", help="Description of the task")
     p_task.add_argument("--id", help="Task ID (e.g. TASK-001). Auto-generated if omitted")
     p_task.add_argument("--expected", help="Expected outcome / deliverables")
